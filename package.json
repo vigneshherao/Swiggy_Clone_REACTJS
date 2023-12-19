@@ -1,0 +1,29 @@
+{
+  "name": "swiggy",
+  "version": "1.0.0",
+  "description": "This is namaste react project based on swiggy clone using react",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vigneshherao/Swiggy_Clone_REACTJS.git"
+  },
+  "author": "Vignesh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vigneshherao/Swiggy_Clone_REACTJS/issues"
+  },
+  "homepage": "https://github.com/vigneshherao/Swiggy_Clone_REACTJS#readme",
+  "dependencies": {
+    "jsx": "^0.9.89",
+    "parcel": "^2.10.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "process": "^0.11.10"
+  }
+}
