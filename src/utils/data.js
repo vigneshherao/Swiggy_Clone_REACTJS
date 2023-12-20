@@ -1,4 +1,4 @@
-const restaurants = [
+export const restaurants = [
     {
       info: {
         id: "364047",
@@ -1333,4 +1333,114 @@ const restaurants = [
   ];
   
 
-export default restaurants;
+export const itemList =
+  [
+    {
+      "id": "750131",
+      "imageId": "v1674029850/PC_Creative%20refresh/3D_bau/banners_new/Dosa.png",
+      "action": {
+        "link": "https://www.swiggy.com/collections/80424?collection_id=80424&tags=layout_CCS_Dosa&type=rcv2",
+        "text": "Dosa",
+        "type": "WEBLINK"
+      },
+      "entityType": "BANNER",
+      "accessibility": {
+        "altText": "restaurants curated for dosa",
+        "altTextCta": "open"
+      },
+      "entityId": "swiggy://collectionV2?collection_id=80424&tags=layout_CCS_Dosa",
+      "frequencyCapping": {
+        
+      }
+    },
+    {
+      "id": "750234",
+      "imageId": "v1674029855/PC_Creative%20refresh/3D_bau/banners_new/Poori.png",
+      "action": {
+        "link": "https://www.swiggy.com/collections/80377?collection_id=80377&tags=layout_BAU_Contextual%2Cpoori&type=rcv2",
+        "text": "Poori",
+        "type": "WEBLINK"
+      },
+      "entityType": "BANNER",
+      "accessibility": {
+        "altText": "restaurant curated for poori",
+        "altTextCta": "open"
+      },
+      "entityId": "80377",
+      "frequencyCapping": {
+        
+      }
+    },
+    {
+      "id": "750554",
+      "imageId": "v1674029842/PC_Creative%20refresh/3D_bau/banners_new/Uttapam.png",
+      "action": {
+        "link": "https://www.swiggy.com/collections/80415?collection_id=80415&tags=layout_CCS_Uthappam&type=rcv2",
+        "text": "Uthappam",
+        "type": "WEBLINK"
+      },
+      "entityType": "BANNER",
+      "accessibility": {
+        "altText": "restaurant curated for uttappam",
+        "altTextCta": "open"
+      },
+      "entityId": "swiggy://collectionV2?collection_id=80415&tags=layout_CCS_Uthappam",
+      "frequencyCapping": {
+        
+      }
+    },
+    {
+      "id": "750643",
+      "imageId": "v1674029846/PC_Creative%20refresh/3D_bau/banners_new/Idli.png",
+      "action": {
+        "link": "https://www.swiggy.com/collections/80440?collection_id=80440&tags=layout_CCS_Idli&type=rcv2",
+        "text": "Idli",
+        "type": "WEBLINK"
+      },
+      "entityType": "BANNER",
+      "accessibility": {
+        "altText": "restaurants curated for idly",
+        "altTextCta": "open"
+      },
+      "entityId": "swiggy://collectionV2?collection_id=80440&tags=layout_CCS_Idli",
+      "frequencyCapping": {
+        
+      }
+    },
+    {
+      "id": "750204",
+      "imageId": "v1674029853/PC_Creative%20refresh/3D_bau/banners_new/Parotta.png",
+      "action": {
+        "link": "https://www.swiggy.com/collections/80477?collection_id=80477&tags=layout_BAU_Contextual%2Cparotta&type=rcv2",
+        "text": "Parotta",
+        "type": "WEBLINK"
+      },
+      "entityType": "BANNER",
+      "accessibility": {
+        "altText": "restaurant curated for parotta",
+        "altTextCta": "open"
+      },
+      "entityId": "80477",
+      "frequencyCapping": {
+        
+      }
+    },
+    {
+      "id": "750561",
+      "imageId": "v1674029842/PC_Creative%20refresh/3D_bau/banners_new/Vada.png",
+      "action": {
+        "link": "https://www.swiggy.com/collections/80425?collection_id=80425&tags=layout_BAU_Contextual%2Cvada&type=rcv2",
+        "text": "Vada",
+        "type": "WEBLINK"
+      },
+      "entityType": "BANNER",
+      "accessibility": {
+        "altText": "restaurants curated for vada",
+        "altTextCta": "open"
+      },
+      "entityId": "80425",
+      "frequencyCapping": {
+        
+      }
+    }
+];
