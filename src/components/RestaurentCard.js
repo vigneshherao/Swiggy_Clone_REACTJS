@@ -1,7 +1,7 @@
 import { cardUrl } from "../utils/link";
 const RestaurentCard = ({ resData }) => {
     let { name, avgRating, deliveryTime, locality, cuisines, cloudinaryImageId } =
-      resData.info;
+      resData;
     return (
       <div className="card">
         <img
