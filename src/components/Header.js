@@ -1,4 +1,4 @@
-import { logoURL } from "./utils/link";
+import { logoURL } from "../utils/link";
 const Header = () => {
     return (
       <div className="header">

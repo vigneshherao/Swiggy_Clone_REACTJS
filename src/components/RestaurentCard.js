@@ -1,4 +1,4 @@
-import { cardUrl } from "./utils/link";
+import { cardUrl } from "../utils/link";
 const RestaurentCard = ({ resData }) => {
     let { name, avgRating, deliveryTime, locality, cuisines, cloudinaryImageId } =
       resData.info;
