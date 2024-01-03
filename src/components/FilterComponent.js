@@ -14,7 +14,7 @@ const FilterComponent = ({ onFilter }) => {
         </button>
         <button
           onClick={() => {
-            onFilter((res) => res.deliveryTime < 25);
+            onFilter((res) => res.info.sla.deliveryTime <= 30);
           }}
         >
           Fast Delivery
@@ -23,19 +23,19 @@ const FilterComponent = ({ onFilter }) => {
       <div className="option">
         <button
           onClick={() => {
-            onFilter((res) => res.veg == true);
+            onFilter((res) => res.info.veg == true);
           }}
         >
           Pure Veg
         </button>
       </div>
       <div className="option">
-        <button
+      <button
           onClick={() => {
-            onFilter((res) => res.freeDelivery == true);
+            onFilter((res) => res.info.sla.deliveryTime <= 30);
           }}
         >
-          Free Delivery
+          Fast Delivery
         </button>
       </div>
     </div>

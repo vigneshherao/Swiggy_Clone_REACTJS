@@ -1,7 +1,7 @@
 import { cardUrl } from "../utils/link";
 const RestaurentCard = ({ resData }) => {
-    let { name, avgRating, deliveryTime, locality, cuisines, cloudinaryImageId } =
-      resData;
+    let { name, avgRating, sla, locality, cuisines, cloudinaryImageId } =
+      resData.info;
     return (
       <div className="card">
         <img
@@ -13,11 +13,11 @@ const RestaurentCard = ({ resData }) => {
           }
           alt="Card image cap"
         ></img>
-        <div className="card-offer">30% OFF</div>
+        {/* <div className="card-offer">30% OFF</div> */}
         <div className="card-body">
           <h5>{name}</h5>
           <p>
-            {avgRating} . {deliveryTime}mins
+            {avgRating} . {sla.slaString}
           </p>
           <div className="card-subtext">
             <p>{cuisines.join(",").slice(0, 24) + ".."}</p>
