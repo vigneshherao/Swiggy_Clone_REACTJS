@@ -1,5 +1,3 @@
-import { restaurantsData } from "../utils/data";
-import { useState } from "react";
 
 const FilterComponent = ({ onFilter }) => {
   return (
