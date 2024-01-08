@@ -1,0 +1,25 @@
+What is the difference between Named Export, Default export and * as export?
+
+The main difference is between our Default export defines it only can export only one component in a file.If we have two or more component
+we have to export it using named export !
+
+
+
+What is the importance of config.js file?
+
+It allows developers to configure their applications in an XML block instead of hard-coding values inside their scripts or in JSON objects.
+
+What are React Hooks?
+
+React hooks defines it is an utility function which is having super power. Mainlly it has two hooks in react useState and use Effect!
+
+
+Why do we need a useState Hook?
+
+
+UseState hooks defines it will will have statevariable if a changes is appiled to a state variable it re renders the component that is called reconlization 
+that uses diff algorithm!
+
+
+
+

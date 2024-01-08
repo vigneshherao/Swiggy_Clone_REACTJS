@@ -1,0 +1,33 @@
+is JSX mandatory for react?
+
+JSX is javascript execute which we are using as html rendering in JSX, It is very easy compared to class compoponent. Where here we can use this with functional component.
+
+is Es6 mandatory for react?
+
+ES6 is the standardization of javascript for making code more readable and more accessible.
+
+{titleComponent} will refers an javascript inside jsx if we write js inside curly bracket means we can acess the js file in this technique.
+
+{<titleComponent> and <titleComponent><titleCompoent/>}
+
+This one is refering react component in js file but this two works as similar.
+
+
+
+How can I write comments in jsx?
+
+There are single line comments and multiline comments where we  can use both in react
+EG - // and    /* this is comment */
+
+
+Question6 ---  What is Virtual DOM? Answer: Before understanding what virtual DOM is lets understand what is DOM (Browser/Real DOM). DOM stands for the "Document Object Model". It is a structured representation of HTML in the webpage or application. It represents the entire UI of the web application as the tree data structure.
+
+In simple words, DOM is the structural representation of HTML elements of a web application.
+
+DOM is very useful as it allows webdevelopers to modify the content through JavaScript, also it being in structured format helps a lot as we choose specific targets and all the code become much easier to work with.
+
+Disadvantages of real DOM? -> When there is a change, then the entire DOM will be re-rendered.
+
+Now, lets see what Virtual DOM is: Virtual DOM is the light weight copy of the Real DOM. Whenever there is a change in the any element, a new virtual DOM is created, this new virtual dom is compared with the previous virtual DOM tree and make note of the changes. After this, it finds the best possible ways to make changes to the real DOM. Now only the updated elements will get rendered on the page again.
+
+The process of comparing the current virtual DOM tree with the previous one is known as "Diffing". Once React finds out what exactly has changed then it updates those elements only, on real DOM.

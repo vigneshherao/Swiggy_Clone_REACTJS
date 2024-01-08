@@ -26,10 +26,10 @@ const fetchData = async () => {
     );
     let jsonData = await data.json();
     setRestaurants(
-      jsonData.data.cards[4].card.card.gridElements.infoWithStyle.restaurants
+      jsonData.data.cards[2].card.card.gridElements.infoWithStyle.restaurants
     );
     setFilterRestaurants(
-      jsonData.data.cards[4].card.card.gridElements.infoWithStyle.restaurants
+      jsonData.data.cards[2].card.card.gridElements.infoWithStyle.restaurants
     );
   };
 

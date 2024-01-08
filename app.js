@@ -2,10 +2,10 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./src/components/Header";
 import Body from "./src/components/Body";
-import Footer from "./src/components/Footer";
-import { createBrowserRouter,RouterProvider } from "react-router-dom";
-import About from "./src/components/About";
+import { createBrowserRouter,RouterProvider,Outlet} from "react-router-dom";
+import Offers from "./src/components/Offers";
 import Error from "./src/components/Error";
+import Help from "./src/components/Help";
 
 // Header
 // Body
@@ -15,8 +15,7 @@ const AppLayout = () => {
   return (
     <div className="app">
       <Header />
-      <Body />
-      <Footer/>
+      <Outlet/>
     </div>
   );
 };
@@ -29,12 +28,23 @@ const appRouter = createBrowserRouter(
     {
       path:"/",
       element:<AppLayout/>,
-      errorElement:<Error/>
+      children:[
+          {
+            path:"/",
+            element:<Body/>,
+            errorElement:<Error/>
+          },
+          {
+            path:"/offers",
+            element:<Offers/>
+          },
+          {
+            path:"/help",
+            element:<Help/>
+          }
+      ]
     },
-    {
-      path:"/about",
-      element:<About/>
-    }
+
   ]
 )
 
