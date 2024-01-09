@@ -1,4 +1,7 @@
 import { cardUrl } from "../utils/link";
+import { Link } from "react-router-dom";
+
+
 const RestaurentCard = ({ resData }) => {
     let { name, avgRating, sla, locality, cuisines, cloudinaryImageId } =
       resData.info;

@@ -6,6 +6,7 @@ import { createBrowserRouter,RouterProvider,Outlet} from "react-router-dom";
 import Offers from "./src/components/Offers";
 import Error from "./src/components/Error";
 import Help from "./src/components/Help";
+import { Menu } from "./src/components/Menu";
 
 // Header
 // Body
@@ -14,7 +15,7 @@ import Help from "./src/components/Help";
 const AppLayout = () => {
   return (
     <div className="app">
-      <Header />
+      {/* <Header /> */}
       <Outlet/>
     </div>
   );
@@ -41,6 +42,10 @@ const appRouter = createBrowserRouter(
           {
             path:"/help",
             element:<Help/>
+          },
+          {
+            path:"/menu/:resId",
+            element:<Menu/>
           }
       ]
     },

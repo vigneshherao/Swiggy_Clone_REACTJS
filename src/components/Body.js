@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import RestaurentCard from "./RestaurentCard";
-import {itemList } from "../utils/data";
+import { itemList } from "../utils/data";
 import FilterComponent from "./FilterComponent";
 import Shimmer from "./ShimmerComponent";
 import ItemCard from "./ItemCart";
-
+import { Link } from "react-router-dom";
 
 const Body = () => {
   const [restaurants, setRestaurants] = useState([]);
@@ -18,9 +18,9 @@ const Body = () => {
 
   useEffect(() => {
     fetchData();
-  },[]);
+  }, []);
 
-const fetchData = async () => {
+  const fetchData = async () => {
     let data = await fetch(
       "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.8879528&lng=74.8831089&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
     );
@@ -70,7 +70,9 @@ const fetchData = async () => {
         <FilterComponent onFilter={handleFilter} />
         <div className="res-container">
           {filterRestaurants.map((restaurant) => (
-            <RestaurentCard key={restaurant.info.id} resData={restaurant} />
+            <Link className="linkToMenu" key={restaurant.info.id} to={"/menu/" + restaurant.info.id}>
+              <RestaurentCard resData={restaurant} />
+            </Link>
           ))}
         </div>
       </div>
