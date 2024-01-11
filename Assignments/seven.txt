@@ -1,0 +1,27 @@
+1. What are various ways to add images into our App? Explain with code examples
+
+1.We can have images via using jsx callling img tag and src!
+2.Import from module eg:import house from house.jpg;
+3.require can also be used for including audio, video or document files in your project.
+4.By import as component
+
+
+2.What would happen if we do console.log(useState())?
+
+We should not call usestate directly in console.log because it is used in higher order of fucntional component. It will give some erro in console
+
+
+3.How will useEffect behave if we don't add a dependency array ?
+
+useEffect will render each time while component is renering . That makes irregular fucntionality on react.
+
+4.What is SPA?
+
+Single page application is the method that works on mainting single web pages in that pages only it will work . React basically works in spa process!
+
+5.What is difference between Client Side Routing and Server Side Routing?
+
+Client Side Routing is very optimized because it will not request to server while clicking any link ! 
+
+Server side routing means the request will go to server and it fectch the data and render.
+

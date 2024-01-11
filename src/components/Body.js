@@ -20,16 +20,18 @@ const Body = () => {
     fetchData();
   }, []);
 
+
   const fetchData = async () => {
     let data = await fetch(
       "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.8879528&lng=74.8831089&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
     );
     let jsonData = await data.json();
+    console.log(jsonData);
     setRestaurants(
-      jsonData.data.cards[2].card.card.gridElements.infoWithStyle.restaurants
+      jsonData.data.cards[4].card.card.gridElements.infoWithStyle.restaurants
     );
     setFilterRestaurants(
-      jsonData.data.cards[2].card.card.gridElements.infoWithStyle.restaurants
+      jsonData.data.cards[4].card.card.gridElements.infoWithStyle.restaurants
     );
   };
 

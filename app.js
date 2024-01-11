@@ -5,8 +5,9 @@ import Body from "./src/components/Body";
 import { createBrowserRouter,RouterProvider,Outlet} from "react-router-dom";
 import Offers from "./src/components/Offers";
 import Error from "./src/components/Error";
-import Help from "./src/components/Help";
+import HelpClass from "./src/components/HelpClass";
 import { Menu } from "./src/components/Menu";
+import UserClass from "./src/components/UserClass";
 
 // Header
 // Body
@@ -15,7 +16,7 @@ import { Menu } from "./src/components/Menu";
 const AppLayout = () => {
   return (
     <div className="app">
-      {/* <Header /> */}
+      <Header />
       <Outlet/>
     </div>
   );
@@ -41,7 +42,7 @@ const appRouter = createBrowserRouter(
           },
           {
             path:"/help",
-            element:<Help/>
+            element:<HelpClass/>
           },
           {
             path:"/menu/:resId",
