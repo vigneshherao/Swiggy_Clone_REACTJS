@@ -1,0 +1,46 @@
+->What is a Microservice?
+
+Microservice architecture is an method of following a project based on the sub divison method. The projects are made by divding into each parts and malking into the one by last . That
+will be easy to use and we can recongnize it quickly!
+
+
+-->What is Monolith architecture?
+
+Monolith architecture is the method that will contain all the layers in one foundation that will be called monolith archetechture!
+
+-->What is the difference between Monolith and Microservice?
+
+The main difference is Microservice is easy to maintain!
+Microservice is complexed!
+Easy to update this service
+
+
+->Why do we need a useEffect Hook?
+
+useEffect is a hook where it is called after rendering some component.It is mainly used for while callling api and all. THis works on the remderiing concepts
+
+-->What is Optional Chaining?
+
+Optional chaining (?.) The optional chaining ( ?. ) operator accesses an object's property or calls a function. If the object accessed or function called using this operator is undefined or null , the expression short circuits and evaluates to undefined instead of throwing an error!
+
+-->What is Shimmer UI?
+
+This shimmer ui is used for the first rendering for eg : If am using useEffect in my app means am fecthing the data from the api. So it takes a seconds to load the 
+data and to render in to main component. So at that time we can easily use shimmer ui Effect.
+
+
+-->● What is CORS?
+
+Cross-origin resource sharing it shares the resource btwn the two domains
+
+
+-->What is async and await?
+
+it is used for the js is scynchronus right ? so some time it will take delay at that time first render some thing then this async function
+
+
+-> What is the use of `const json = await data.json();` in getRestaurants()
+
+
+It will wait for the data to be parsed from data.json and it will give the actual data!
+

@@ -1,7 +1,7 @@
 import { menuImage } from "../utils/link";
-import Shimmer from "./ShimmerComponent";
 
 export const MenuCard = ({ itemData }) => {
+
   if (!itemData) {
     return null;
   }
@@ -24,7 +24,7 @@ export const MenuCard = ({ itemData }) => {
         <p className="item-paragraph">{description}</p>
       </div>
       <div className="item-image">
-        <img src={menuImage + imageId} alt={name} />
+        <img src={imageId? menuImage + imageId : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPUK6ck6_CSZRSTamw7RTCUcfcUFF7ePg3uV-6sjeGaEhE2Rq-mM6wWPbNkN0bqwdIzWg&usqp=CAU"} alt={name} />
       </div>
     </div>
   );

@@ -1,4 +1,3 @@
-
 const FilterComponent = ({ onFilter }) => {
   return (
     <div className="filter-options">

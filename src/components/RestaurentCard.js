@@ -1,5 +1,4 @@
 import { cardUrl } from "../utils/link";
-import { Link } from "react-router-dom";
 
 
 const RestaurentCard = ({ resData }) => {
