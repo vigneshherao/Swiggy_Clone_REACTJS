@@ -1,0 +1,38 @@
+When and why do we need lazy()?
+
+When our projects goes to large application , if we didn't use lazy our web app become slower and not user friendly! That time we can 
+use lazy loading to improve the web app and by adding code splitiing!
+
+What is suspense?
+
+suspense is used in the lazy loading to show the page if the file needs time to load!
+
+allows you to postpone rendering until the data is available, enhancing user experience by offering fallback content or loading indications
+
+
+Why we got this error : A component suspended while responding to
+synchronous input. This will cause the UI to be replaced with a loading indicator.
+To fix, updates that suspend should be wrapped with startTransition? How does
+suspense fix this error?
+
+
+It manages asynchronus data , allows you to postone rendering untill data is available!
+it make user experience by offering fallback content!
+
+
+Advantages and disadvantages of using this code splitting pattern?
+
+
+Advantages ----- faster initial loading time, lower memory usage, better user experience, and a smaller app size
+
+disadvantages ----increased complexity in development and testing processes, more network requests that can affect performance, 
+
+
+When do we and why do we need suspense?
+
+
+we need suspense to offering a load by fallback by suspend!
+we need to use suspense when we using the lazy loading in our app!
+
+
+
