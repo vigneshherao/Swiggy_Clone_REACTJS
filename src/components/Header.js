@@ -19,7 +19,7 @@ const Header = () => {
             <li><Link to={"/"}>Home</Link></li>
             <li><Link to={"/offers"}>Offers</Link></li>
             <li><Link to={"/help"}>Help</Link></li>
-            <li><Link to={"/help"}>Help</Link></li>
+            <li><Link to={"/profile"}>Vignesh</Link></li>
             <li>Status{status? "🟢":"🔴"}</li>
             <button onClick={()=>{
               btnLogin == "login"? setBtnLogin("logout"):setBtnLogin("login");

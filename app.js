@@ -1,4 +1,4 @@
-import React from "react";
+import React,{lazy,Suspense} from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./src/components/Header";
 import Body from "./src/components/Body";
@@ -7,11 +7,14 @@ import Offers from "./src/components/Offers";
 import Error from "./src/components/Error";
 import HelpClass from "./src/components/HelpClass";
 import { Menu } from "./src/components/Menu";
-import UserClass from "./src/components/UserClass";
 
 // Header
 // Body
 // Footer
+
+const Profile = lazy(()=> {
+  return import("./src/components/Profile");
+});
 
 const AppLayout = () => {
   return (
@@ -43,6 +46,10 @@ const appRouter = createBrowserRouter(
           {
             path:"/help",
             element:<HelpClass/>
+          },
+          {
+            path:"/profile",
+            element:<Suspense fallback = {<h2>Loading</h2>} ><Profile/></Suspense>
           },
           {
             path:"/menu/:resId",
