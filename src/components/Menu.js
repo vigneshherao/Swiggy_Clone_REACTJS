@@ -27,24 +27,24 @@ export const Menu = () => {
       ?.card?.card?.itemCards;
 
   return (
-    <div className="menu-container">
-      <div className="header-path">
-        <h6>Hotel / Mangaluru / Burger King</h6>
+    <div className=" w-[100%] px-[25%]">
+      <div className="mt-4">
+        <h6 className="text-xs text-gray-400 font-thin">Hotel / Mangaluru / {name}</h6>
       </div>
-      <div className="restaurent-box">
+      <div className="mt-[25px] flex pr-5 justify-between border-b border-gray-300 leading-none ">
         <div className="restaurent-title">
-          <h4>{name}</h4>
-          <p>{cuisines.join(",")}</p>
-          <p>{`${locality} , ${city}`}</p>
+          <h4 className="mb-2">{name}</h4>
+          <p className="text-gray-500 leading-none mb-1 text-sm">{cuisines.join(",")}</p>
+          <p className="text-gray-500 mb-1 text-sm">{`${locality} , ${city}`}</p>
         </div>
-        <div className="restaurent-rating">
-          <span className="menuStar">&#9733; {avgRating}</span>
-          <p className="menuRating">{totalRatingsString}</p>
+        <div className="h-[70px] w-16 border border-gray-300">
+          <span className="ml-2 text-center flex text-green-600 mb-2 pb-2 border-b border-gray-300 font-bold">&#9733; {avgRating}</span>
+          <p className="text-center text-xs text-gray-500 font-semibold">{totalRatingsString}</p>
         </div>
       </div>
-      <div className="restaurent-options">
+      <div className="mt-2 flex justify-between border-b border-gray-300 font-bold">
         <div>
-          <p>veg only</p>
+          <p className="text-green-600 font-semibold justify-center">Veg only</p>
         </div>
         <div className="form-check form-switch">
           <input
