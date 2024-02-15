@@ -7,6 +7,8 @@ import Offers from "./src/components/Offers";
 import Error from "./src/components/Error";
 import HelpClass from "./src/components/HelpClass";
 import { Menu } from "./src/components/Menu";
+import Dishes from "./src/components/Dishes";
+
 
 // Header
 // Body
@@ -57,6 +59,10 @@ const appRouter = createBrowserRouter([
         path: "/menu/:resId",
         element: <Menu />,
       },
+      {
+        path:"item/:dish",
+        element: <Dishes/>
+      }
     ],
   },
 ]);

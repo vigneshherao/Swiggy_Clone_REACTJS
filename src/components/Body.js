@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import RestaurentCard from "./RestaurentCard";
+import RestaurentCard,{isOfferdRestaurent} from "./RestaurentCard";
 import { itemList } from "../utils/data";
 import FilterComponent from "./FilterComponent";
 import Shimmer from "./ShimmerComponent";
@@ -13,6 +13,9 @@ const Body = () => {
   const [restaurants, setRestaurants] = useState([]);
   const [filterRestaurants, setFilterRestaurants] = useState([]);
   const [searchRestaurants, setSearchRestaurants] = useState("");
+
+  
+  const RestaurentOfferd = isOfferdRestaurent(RestaurentCard);
 
   useEffect(() => {
     fetchData();
@@ -30,6 +33,7 @@ const Body = () => {
       jsonData.data.cards[4].card.card.gridElements.infoWithStyle.restaurants
     );
   };
+
 
   // const handleFilter = (filterFunction) => {
   //   const filteredRestaurants = restaurants.filter(filterFunction);
@@ -76,7 +80,7 @@ const Body = () => {
       <div className="item-container flex flex-wrap justify-center px-2">
         {itemList.map((item) => {
           return (
-            <Link to={"/item/" + item.action?.text}>
+            <Link key={item.id} to={"/item/" + item.action?.text}>
               <ItemCard key={item.id} cardData={item} />
             </Link>
           );
@@ -94,7 +98,9 @@ const Body = () => {
               key={restaurant.info.id}
               to={"/menu/" + restaurant.info.id}
             >
-              <RestaurentCard resData={restaurant} />
+              {
+                restaurant.info.veg? <RestaurentOfferd key={restaurant.id} resData={restaurant} />:<RestaurentCard key={restaurant.id} resData={restaurant} />
+              }
             </Link>
           ))}
         </div>

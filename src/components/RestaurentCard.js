@@ -29,4 +29,18 @@ const RestaurentCard = ({ resData }) => {
   );
 };
 
+
+
+export const isOfferdRestaurent = (RestaurentCard) =>{
+  return (props)=>{
+    return (
+      <div>
+        <label className=" bg-gray-200 text-black rounded ">Top Selling Restaurant</label>
+        <RestaurentCard {...props}/>
+      </div>
+    )
+  }
+}
+
+
 export default RestaurentCard;
