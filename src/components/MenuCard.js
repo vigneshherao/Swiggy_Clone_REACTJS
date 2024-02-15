@@ -20,15 +20,19 @@ export const MenuCard = ({ itemData }) => {
         )}
         <h6>{name}</h6>
         <p className="mb-3"> &#8377; {price / 100}</p>
-        <p className=" text-[rgba(40,44,63,.45)] text-xs">{description}</p>
+        <p className=" text-[rgba(40,44,63,.45)] text-xs w-[50%]">{description? description.slice(0, 110) + ".." : ""}</p>
       </div>
       <div className="h-[96px] w-[118px] object-cover">
+
+        <div className="">
+          <button className="bg-white text-green-500 absolute ml-auto w-15 m-1 font-semibold px-2 py-1 rounded-md hover:text-gray-600" >Add +</button>
+        </div>
         <img
           className="h-[96px] w-[118px] rounded-lg object-cover"
           src={
             imageId
               ? menuImage + imageId
-              : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPUK6ck6_CSZRSTamw7RTCUcfcUFF7ePg3uV-6sjeGaEhE2Rq-mM6wWPbNkN0bqwdIzWg&usqp=CAU"
+              : "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxleHBsb3JlLWZlZWR8Mnx8fGVufDB8fHx8fA%3D%3D"
           }
           alt={name}
         />
