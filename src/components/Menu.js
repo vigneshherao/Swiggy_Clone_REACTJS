@@ -2,8 +2,12 @@ import { useParams } from "react-router-dom";
 import { MenuShimmer } from "./MenuShimmer";
 import useMenu from "../utils/useMenu";
 import RestaurentAccordian from "./RestaurentAccordian";
+import { useState } from "react";
 
 export const Menu = () => {
+
+  let [showIndex ,setShowIndex ] = useState(0);
+
   let { resId } = useParams();
 
   const restaurantItems = useMenu(resId);
@@ -11,6 +15,7 @@ export const Menu = () => {
   if (restaurantItems.length === 0) {
     return <MenuShimmer />;
   }
+
 
   const { name, cuisines, city, totalRatingsString, locality, avgRating } =
     restaurantItems.data?.cards[0]?.card?.card?.info;
@@ -71,8 +76,10 @@ export const Menu = () => {
         </div>
       </div>
       <div>
-        {choices.map((res) => {
-          return <RestaurentAccordian key={res.id} data={res} />;
+        {choices.map((res,index) => {
+          return (
+            <RestaurentAccordian key={res.id} data={res} showItem={index === showIndex ? true:false } setShowIndex = {()=> setShowIndex(index)} />
+          );
         })}
       </div>
     </div>
