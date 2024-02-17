@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from "react";
+import React, { lazy, Suspense, useEffect, useState } from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./src/components/Header";
 import Body from "./src/components/Body";
@@ -8,7 +8,7 @@ import Error from "./src/components/Error";
 import HelpClass from "./src/components/HelpClass";
 import { Menu } from "./src/components/Menu";
 import Dishes from "./src/components/Dishes";
-
+import UserContext from "./src/utils/userContext";
 
 // Header
 // Body
@@ -19,9 +19,18 @@ const Profile = lazy(() => {
 });
 
 const AppLayout = () => {
+  const [username, setUsername] = useState("");
+
+  useEffect(() => {
+    setUsername("new name");
+  }, []);
+
+  
   return (
     <div className="app">
-      <Header />
+      <UserContext.Provider value={{ name: username }}>
+        <Header />
+      </UserContext.Provider>
       <Outlet />
     </div>
   );
@@ -60,9 +69,9 @@ const appRouter = createBrowserRouter([
         element: <Menu />,
       },
       {
-        path:"item/:dish",
-        element: <Dishes/>
-      }
+        path: "item/:dish",
+        element: <Dishes />,
+      },
     ],
   },
 ]);

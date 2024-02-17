@@ -1,11 +1,16 @@
 import { logoURL } from "../utils/link";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import useInternetStatus from "../utils/useInternetStatus";
+import UserContext from "../utils/userContext";
 
 const Header = () => {
   let [btnLogin, setBtnLogin] = useState("login");
   const status = useInternetStatus();
+
+  const {name} = useContext(UserContext);
+
+  
   return (
     <div className="flex justify-between border shadow-sm px-5 items-center py-3">
       <div className="logo w-20">
@@ -30,7 +35,7 @@ const Header = () => {
           </li>
           <li className="mr-8">
             <Link className="no-underline text-black" to={"/profile"}>
-              Vignesh
+              {name}
             </Link>
           </li>
           <li className="mr-8">Status{status ? "🟢" : "🔴"}</li>

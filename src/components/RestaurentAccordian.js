@@ -18,7 +18,7 @@ const RestaurentAccordian = ({ data , showItem , setShowIndex}) => {
 
   return (
     <div>
-      <div className="flex justify-between cursor-pointer  mt-4 mb-3 pb-2 shadow-md  items-center bg-gray-50" onClick={()=> {hideItem(); showItems();}}>
+      <div className="flex justify-between cursor-pointer  mt-4 mb-3 pb-2 shadow-md  items-center bg-gray-50 rounded-sm" onClick={()=> {hideItem(); showItems();}}>
         <div>
           <h5 className="mb-2 font-bold text-gray-600 pl-2 items-center justify-center">
             {title} ({itemCards.length})
