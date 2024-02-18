@@ -24,6 +24,8 @@ export const Menu = () => {
     restaurantItems.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]
       ?.card?.card?.itemCards;
 
+  console.log(restaurantItems);
+  
   const choices =
     restaurantItems.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
       (res) => {
@@ -33,8 +35,6 @@ export const Menu = () => {
         );
       }
     );
-
-  console.log(choices);
 
   return (
     <div className=" w-[100%] px-[23%]">

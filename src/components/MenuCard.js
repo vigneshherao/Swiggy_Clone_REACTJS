@@ -1,3 +1,5 @@
+import { useDispatch } from "react-redux";
+import { addItem } from "../utils/cartSlice";
 import { menuImage } from "../utils/link";
 
 export const MenuCard = ({ itemData }) => {
@@ -6,6 +8,11 @@ export const MenuCard = ({ itemData }) => {
   }
 
   const { name, imageId, description, isVeg, price } = itemData;
+
+  const dispatch = useDispatch();
+  const handleAddItem = (itemData)=>{
+    dispatch(addItem(itemData));
+  }
 
   return (
     <div className="menu-card flex mt-[20px] justify-between pb-[1.5rem] items-center border-b border-gray-300 leading-none px-2">
@@ -25,7 +32,9 @@ export const MenuCard = ({ itemData }) => {
       <div className="h-[96px] w-[118px] object-cover">
 
         <div className="">
-          <button className="bg-white text-green-500 absolute ml-auto w-15 m-1 font-semibold px-2 py-1 rounded-md hover:text-gray-600" >Add +</button>
+          <button className="bg-white text-green-500 absolute ml-auto w-15 m-1 font-semibold px-2 py-1 rounded-md hover:text-gray-600"  onClick={
+            ()=> handleAddItem(itemData)
+          }>Add +</button>
         </div>
         <img
           className="h-[96px] w-[118px] rounded-lg object-cover"

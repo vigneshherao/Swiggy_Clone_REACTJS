@@ -9,6 +9,8 @@ import HelpClass from "./src/components/HelpClass";
 import { Menu } from "./src/components/Menu";
 import Dishes from "./src/components/Dishes";
 import UserContext from "./src/utils/userContext";
+import { Provider } from "react-redux";
+import appStore from "./src/utils/appStore";
 
 // Header
 // Body
@@ -27,12 +29,14 @@ const AppLayout = () => {
 
   
   return (
+    <Provider store = {appStore}>
     <div className="app">
       <UserContext.Provider value={{ name: username }}>
         <Header />
       </UserContext.Provider>
       <Outlet />
     </div>
+    </Provider>
   );
 };
 
@@ -69,7 +73,7 @@ const appRouter = createBrowserRouter([
         element: <Menu />,
       },
       {
-        path: "item/:dish",
+        path: "item/:id",
         element: <Dishes />,
       },
     ],

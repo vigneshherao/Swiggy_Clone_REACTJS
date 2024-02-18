@@ -18,12 +18,14 @@
   },
   "homepage": "https://github.com/vigneshherao/Swiggy_Clone_REACTJS#readme",
   "dependencies": {
+    "@reduxjs/toolkit": "^2.2.1",
     "bootstrap": "^5.3.2",
     "jsx": "^0.9.89",
     "parcel": "^2.10.3",
     "react": "^18.2.0",
     "react-bootstrap": "^2.9.1",
     "react-dom": "^18.2.0",
+    "react-redux": "^9.1.0",
     "react-router-dom": "^6.21.1"
   },
   "devDependencies": {

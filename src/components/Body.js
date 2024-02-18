@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import RestaurentCard,{isOfferdRestaurent} from "./RestaurentCard";
-import { itemList } from "../utils/data";
 import FilterComponent from "./FilterComponent";
 import Shimmer from "./ShimmerComponent";
 import ItemCard from "./ItemCart";
@@ -13,8 +12,9 @@ const Body = () => {
   const [restaurants, setRestaurants] = useState([]);
   const [filterRestaurants, setFilterRestaurants] = useState([]);
   const [searchRestaurants, setSearchRestaurants] = useState("");
+  const [itemList,setItemList] = useState([]);
 
-  
+  console.log(itemList);
   const RestaurentOfferd = isOfferdRestaurent(RestaurentCard);
 
   useEffect(() => {
@@ -25,7 +25,11 @@ const Body = () => {
     let data = await fetch(
       "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.8879528&lng=74.8831089&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
     );
+    let itemData = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.887952142405728&lng=74.88308038562536&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
+    let jsonItem = await itemData.json();
     let jsonData = await data.json();
+    console.log(jsonItem.data.cards[0].card.card.imageGridCards.info)
+    setItemList(jsonItem.data.cards[0].card.card.imageGridCards.info.slice(0,6));
     setRestaurants(
       jsonData.data.cards[4].card.card.gridElements.infoWithStyle.restaurants
     );
@@ -33,6 +37,8 @@ const Body = () => {
       jsonData.data.cards[4].card.card.gridElements.infoWithStyle.restaurants
     );
   };
+
+  console.log(itemList)
 
 
   // const handleFilter = (filterFunction) => {
@@ -80,7 +86,7 @@ const Body = () => {
       <div className="item-container flex flex-wrap justify-center px-2">
         {itemList.map((item) => {
           return (
-            <Link key={item.id} to={"/item/" + item.action?.text}>
+            <Link key={item.id} to={"/item/" + item.id}>
               <ItemCard key={item.id} cardData={item} />
             </Link>
           );
