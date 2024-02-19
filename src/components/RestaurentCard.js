@@ -34,8 +34,8 @@ const RestaurentCard = ({ resData }) => {
 export const isOfferdRestaurent = (RestaurentCard) =>{
   return (props)=>{
     return (
-      <div>
-        <label className=" bg-gray-200 text-black rounded ">Top Selling Restaurant</label>
+      <div className="">
+        <label className=" bg-black text-white font-semibold text-sm px-5 py-1 rounded mb-2">Top Selling Restaurant</label>
         <RestaurentCard {...props}/>
       </div>
     )

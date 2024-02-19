@@ -17,7 +17,7 @@ const Header = () => {
   console.log(cartItems)
   
   return (
-    <div className="flex justify-between border shadow-sm px-5 items-center py-3">
+    <div className="hidden sm:flex justify-between border shadow-sm px-5 items-center py-3">
       <div className="logo w-20">
         <img className="logoImg" src={logoURL}></img>
       </div>

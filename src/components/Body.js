@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import RestaurentCard,{isOfferdRestaurent} from "./RestaurentCard";
+import RestaurentCard, { isOfferdRestaurent } from "./RestaurentCard";
 import FilterComponent from "./FilterComponent";
 import Shimmer from "./ShimmerComponent";
 import ItemCard from "./ItemCart";
@@ -12,9 +12,8 @@ const Body = () => {
   const [restaurants, setRestaurants] = useState([]);
   const [filterRestaurants, setFilterRestaurants] = useState([]);
   const [searchRestaurants, setSearchRestaurants] = useState("");
-  const [itemList,setItemList] = useState([]);
+  const [itemList, setItemList] = useState([]);
 
-  console.log(itemList);
   const RestaurentOfferd = isOfferdRestaurent(RestaurentCard);
 
   useEffect(() => {
@@ -25,11 +24,15 @@ const Body = () => {
     let data = await fetch(
       "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.8879528&lng=74.8831089&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
     );
-    let itemData = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.887952142405728&lng=74.88308038562536&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
+    let itemData = await fetch(
+      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.887952142405728&lng=74.88308038562536&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+    );
     let jsonItem = await itemData.json();
     let jsonData = await data.json();
-    console.log(jsonItem.data.cards[0].card.card.imageGridCards.info)
-    setItemList(jsonItem.data.cards[0].card.card.imageGridCards.info.slice(0,6));
+    console.log(jsonItem.data.cards[0].card.card.imageGridCards.info);
+    setItemList(
+      jsonItem.data.cards[0].card.card.imageGridCards.info.slice(0, 6)
+    );
     setRestaurants(
       jsonData.data.cards[4].card.card.gridElements.infoWithStyle.restaurants
     );
@@ -38,8 +41,7 @@ const Body = () => {
     );
   };
 
-  console.log(itemList)
-
+  console.log(itemList);
 
   // const handleFilter = (filterFunction) => {
   //   const filteredRestaurants = restaurants.filter(filterFunction);
@@ -56,7 +58,7 @@ const Body = () => {
     <Shimmer />
   ) : (
     <div className="body">
-      <div className="flex justify-center m-1">
+      <div className="flex justify-center m-1 py-3">
         <input
           className="bg-whitesmoke p-2 rounded-lg"
           type="search"
@@ -80,10 +82,10 @@ const Body = () => {
           Search
         </button>
       </div>
-      <span className="text-[24px] font-bold flex justify-start my-2.5 ml-[10rem]">
+      <span className="text-[22px] font-bold flex justify-start my-2.5 ml-[22%] md:ml-[12rem]">
         What's on your mind?
       </span>
-      <div className="item-container flex flex-wrap justify-center px-2">
+      <div className="item-container flex flex-wrap justify-center border-b">
         {itemList.map((item) => {
           return (
             <Link key={item.id} to={"/item/" + item.id}>
@@ -93,20 +95,22 @@ const Body = () => {
         })}
       </div>
       <div className="main-container">
-        <span className="text-[24px] font-bold flex justify-start my-2.5 ml-[10rem]">
-          Restaurants with online food delivery in Mangaluru
+        <span className="text-[20px] font-bold flex justify-start pr-2 my-2.5 ml-[3%] md:ml-[12rem] text-center">
+          Restaurants with online food  delivery in Mangaluru
         </span>
         {/* <FilterComponent onFilter={handleFilter} /> */}
-        <div className="res-container flex flex-wrap justify-center pr-[6rem] pl-[6rem] mt-8">
+        <div className="res-container flex flex-wrap justify-center pr-[6rem] pl-[8rem] mt-8">
           {filterRestaurants.map((restaurant) => (
             <Link
               className="no-underline"
               key={restaurant.info.id}
               to={"/menu/" + restaurant.info.id}
             >
-              {
-                restaurant.info.veg? <RestaurentOfferd key={restaurant.id} resData={restaurant} />:<RestaurentCard key={restaurant.id} resData={restaurant} />
-              }
+              {restaurant.info.veg ? (
+                <RestaurentOfferd key={restaurant.id} resData={restaurant} />
+              ) : (
+                <RestaurentCard key={restaurant.id} resData={restaurant} />
+              )}
             </Link>
           ))}
         </div>

@@ -27,9 +27,9 @@ export const MenuCard = ({ itemData }) => {
         )}
         <h6>{name}</h6>
         <p className="mb-3"> &#8377; {price / 100}</p>
-        <p className=" text-[rgba(40,44,63,.45)] text-xs w-[50%]">{description? description.slice(0, 110) + ".." : ""}</p>
+        <p className=" text-[rgba(40,44,63,.45)] text-xs w-[80%]">{description? description.slice(0, 80) + ".." : ""}</p>
       </div>
-      <div className="h-[96px] w-[118px] object-cover">
+      <div className="">
 
         <div className="">
           <button className="bg-white text-green-500 absolute ml-auto w-15 m-1 font-semibold px-2 py-1 rounded-md hover:text-gray-600"  onClick={
@@ -37,7 +37,7 @@ export const MenuCard = ({ itemData }) => {
           }>Add +</button>
         </div>
         <img
-          className="h-[96px] w-[118px] rounded-lg object-cover"
+          className="h-[96px] w-[170px] sm:w-[128px] rounded-lg object-cover"
           src={
             imageId
               ? menuImage + imageId

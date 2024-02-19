@@ -37,13 +37,13 @@ export const Menu = () => {
     );
 
   return (
-    <div className=" w-[100%] px-[23%]">
+    <div className=" w-[100%] px-[8%] sm:px-[10%] md:px-[20%]">
       <div className="mt-4">
         <h6 className="text-xs text-gray-400 font-thin">
           Hotel / Mangaluru / {name}
         </h6>
       </div>
-      <div className="mt-[25px] flex pr-5 justify-between border-b border-gray-300 leading-none ">
+      <div className="mt-[25px] flex pr-5 justify-between border-b border-gray-300 leading-none pb-3 ">
         <div className="restaurent-title">
           <h4 className="mb-2">{name}</h4>
           <p className="text-gray-500 leading-none mb-1 text-sm">

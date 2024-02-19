@@ -3,7 +3,6 @@ import ReactDOM from "react-dom/client";
 import Header from "./src/components/Header";
 import Body from "./src/components/Body";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
-import Offers from "./src/components/Offers";
 import Error from "./src/components/Error";
 import HelpClass from "./src/components/HelpClass";
 import { Menu } from "./src/components/Menu";
@@ -11,6 +10,8 @@ import Dishes from "./src/components/Dishes";
 import UserContext from "./src/utils/userContext";
 import { Provider } from "react-redux";
 import appStore from "./src/utils/appStore";
+import Cart from "./src/components/Cart";
+import MobileHeader from "./src/components/MobileHeader";
 
 // Header
 // Body
@@ -33,6 +34,7 @@ const AppLayout = () => {
     <div className="app">
       <UserContext.Provider value={{ name: username }}>
         <Header />
+        <MobileHeader/>
       </UserContext.Provider>
       <Outlet />
     </div>
@@ -54,7 +56,7 @@ const appRouter = createBrowserRouter([
       },
       {
         path: "/offers",
-        element: <Offers />,
+        element: <Cart/>,
       },
       {
         path: "/help",
