@@ -13,7 +13,7 @@ const Header = () => {
 
   const cartItems = useSelector((store) => store.cart.items);
 
-  console.log(cartItems);
+  
 
   return (
     <div className="hidden sm:flex justify-between border shadow-sm px-5 items-center py-3">
@@ -35,7 +35,7 @@ const Header = () => {
               className="hover:text-orange-500 no-underline  text-gray-700 font-bold"
               to={"/help"}
             >
-              <i class="fa-solid fa-circle-info mr-1"></i> Help
+              <i className="fa-solid fa-circle-info mr-1"></i> Help
             </Link>
           </li>
           <li className="mr-12">
@@ -43,12 +43,12 @@ const Header = () => {
               className="hover:text-orange-500 no-underline text-gray-700 font-bold"
               to={"/mart"}
             >
-              <i class="fa-solid fa-bag-shopping mr-1"></i> Mart
+              <i className="fa-solid fa-bag-shopping mr-1"></i> Mart
             </Link>
           </li>
           <li className="mr-12">
             <Link className="hover:text-orange-500 no-underline text-gray-700 font-bold">
-              <i class="fa-solid fa-user mr-1"></i> {name}
+              <i className="fa-solid fa-user mr-1"></i> {name}
             </Link>
           </li>
           <li className=" hover:text-orange-500 mr-12 font-bold text-gray-700">
@@ -63,7 +63,7 @@ const Header = () => {
                   : setBtnLogin("login");
               }}
             >
-              <i class="fa-solid fa-arrow-right-from-bracket mr-1"></i>
+              <i className="fa-solid fa-arrow-right-from-bracket mr-1"></i>
               {btnLogin}
             </button>
           </li>

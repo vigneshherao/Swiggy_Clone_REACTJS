@@ -7,8 +7,6 @@ const Cart = ({}) =>{
 
 
     const cartItem = useSelector((store)=> store.cart.items)
-
-    console.log(cartItem);
     return (
         <div>
           <MenuCard itemData={cartItem} />

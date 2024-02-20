@@ -8,4 +8,4 @@ export const itemUrl = "https://media-assets.swiggy.com/swiggy/image/upload/fl_l
 
 export const menuImage = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_1024/";
 
-export const menuData = "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.8879528&lng=74.8831089&restaurantId=";
+export const menuData = "https://corsproxy.org/?https%3A%2F%2Fwww.swiggy.com%2Fdapi%2Fmenu%2Fpl%3Fpage-type%3DREGULAR_MENU%26complete-menu%3Dtrue%26lat%3D28.5270362%26lng%3D77.13593279999999%26restaurantId%3D";

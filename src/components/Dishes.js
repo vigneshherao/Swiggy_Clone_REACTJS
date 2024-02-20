@@ -13,7 +13,6 @@ const Dishes = () => {
     fetchData();
   }, []);
 
-  console.log(info);
    const fetchData = async () => {
     const data = await fetch(
       "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.887952142405728&lng=74.88308038562536&collection=83650&tags=layout_CCS_IceCreams&sortBy=&filters=&type=rcv2&offset=0&page_type=null"

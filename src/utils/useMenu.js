@@ -15,7 +15,7 @@ const useMenu = (resId) => {
     setRestaurantItems(itemData);
   }
 
-
+  
   return restaurantItems;
 };
 

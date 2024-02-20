@@ -28,20 +28,18 @@ const Body = () => {
       "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.887952142405728&lng=74.88308038562536&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
     );
     let jsonItem = await itemData.json();
-    let jsonData = await data.json();
-    console.log(jsonItem.data.cards[0].card.card.imageGridCards.info);
+    let jsonData = await data.json();;
     setItemList(
-      jsonItem.data.cards[0].card.card.imageGridCards.info.slice(0, 6)
+      jsonItem.data?.cards[0]?.card?.card?.imageGridCards?.info?.slice(0, 6)
     );
     setRestaurants(
-      jsonData.data.cards[4].card.card.gridElements.infoWithStyle.restaurants
+      jsonData.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
     setFilterRestaurants(
-      jsonData.data.cards[4].card.card.gridElements.infoWithStyle.restaurants
+      jsonData.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
   };
 
-  console.log(itemList);
 
   // const handleFilter = (filterFunction) => {
   //   const filteredRestaurants = restaurants.filter(filterFunction);
@@ -54,7 +52,7 @@ const Body = () => {
     return <ConnectionError />;
   }
 
-  return restaurants.length == 0 ? (
+  return  !restaurants || restaurants.length === 0  ? (
     <Shimmer />
   ) : (
     <div className="body">
