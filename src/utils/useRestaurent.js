@@ -10,7 +10,7 @@ export const  useRestaurent = () =>{
 
       const fetchData = async () => {
         let data = await fetch(
-          "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.8879528&lng=74.8831089&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+          "https://corsproxy.org/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.8879528&lng=74.8831089&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
         );
         let jsonData = await data.json();
         setRestaurants(
