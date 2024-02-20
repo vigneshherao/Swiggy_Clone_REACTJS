@@ -3,6 +3,7 @@ import RestaurentCard from "./RestaurentCard";
 import { MenuShimmer } from "./MenuShimmer";
 import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
+import DishFilter from "./DishFilter";
 
 const Dishes = () => {
   const [dishes, setDishes] = useState([]);
@@ -28,6 +29,7 @@ const Dishes = () => {
     setDishes(card);
   };
 
+
   return dishes.length == 0 ? (
     <MenuShimmer />
   ) : (
@@ -39,6 +41,7 @@ const Dishes = () => {
         <div className="text-[18px] font-sans flex justify-start my-2.5 ml-[12.5%] md:ml-[12rem]">
           <p className="text-gray-400">{info.description}</p>
         </div>
+        <DishFilter/>
       </div>
       <div className="main-container">
       <span className="text-[23px] font-bold flex justify-start my-2.5 ml-[12.5%] md:ml-[12rem] pt-4">

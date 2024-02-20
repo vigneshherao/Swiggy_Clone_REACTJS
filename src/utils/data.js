@@ -299,6 +299,19 @@ export const itemList =
     }
 ];
 
-
+export const helpData = [
+  {
+    list:"What is Swiggy Customer Care Number?"
+  },
+  {
+    list:"I am unable to find the restaurant I'm looking for?"
+  },
+  {
+    list:"I am unable to place a cash on delivery order?"
+  },
+  {
+    list:"I did not receive my OTP on SMS?"
+  }
+] 
 
 

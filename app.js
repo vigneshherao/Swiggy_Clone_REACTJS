@@ -4,7 +4,6 @@ import Header from "./src/components/Header";
 import Body from "./src/components/Body";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Error from "./src/components/Error";
-import HelpClass from "./src/components/HelpClass";
 import { Menu } from "./src/components/Menu";
 import Dishes from "./src/components/Dishes";
 import UserContext from "./src/utils/userContext";
@@ -12,20 +11,21 @@ import { Provider } from "react-redux";
 import appStore from "./src/utils/appStore";
 import Cart from "./src/components/Cart";
 import MobileHeader from "./src/components/MobileHeader";
+import Help from "./src/components/Help";
 
 // Header
 // Body
 // Footer
 
-const Profile = lazy(() => {
-  return import("./src/components/Profile");
+const Mart = lazy(() => {
+  return import("./src/components/Mart");
 });
 
 const AppLayout = () => {
   const [username, setUsername] = useState("");
 
   useEffect(() => {
-    setUsername("new name");
+    setUsername("Vignesh");
   }, []);
 
   
@@ -60,13 +60,13 @@ const appRouter = createBrowserRouter([
       },
       {
         path: "/help",
-        element: <HelpClass />,
+        element: <Help/>,
       },
       {
-        path: "/profile",
+        path: "/mart",
         element: (
-          <Suspense fallback={<h2>Loading</h2>}>
-            <Profile />
+          <Suspense fallback={<h2>New File</h2>}>
+            <Mart/>
           </Suspense>
         ),
       },

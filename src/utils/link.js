@@ -1,4 +1,4 @@
-export const logoURL = "https://logolook.net/wp-content/uploads/2023/04/Swiggy-Emblem.png";
+export const logoURL = "https://png.pngtree.com/element_our/png/20180917/food-logo-design.-knife-fork-and-spoon-logo.-png_98037.jpg";
 
 
 export const cardUrl = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";

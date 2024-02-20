@@ -12,6 +12,9 @@ export const Menu = () => {
 
   const restaurantItems = useMenu(resId);
 
+
+  console.log(restaurantItems.data?.cards[2]?.card?.card?.info);
+  
   if (restaurantItems.length === 0) {
     return <MenuShimmer />;
   }
@@ -19,6 +22,7 @@ export const Menu = () => {
 
   const { name, cuisines, city, totalRatingsString, locality, avgRating } =
     restaurantItems.data?.cards[0]?.card?.card?.info;
+
 
   const itemCard =
     restaurantItems.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]
