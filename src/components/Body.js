@@ -22,10 +22,10 @@ const Body = () => {
 
   const fetchData = async () => {
     let data = await fetch(
-      "https://corsproxy.org/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.8879528&lng=74.8831089&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.8879528&lng=74.8831089&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
     );
     let itemData = await fetch(
-      "https://corsproxy.org/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.887952142405728&lng=74.88308038562536&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.887952142405728&lng=74.88308038562536&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
     );
     let jsonItem = await itemData.json();
     let jsonData = await data.json();;
@@ -38,6 +38,7 @@ const Body = () => {
     setFilterRestaurants(
       jsonData.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
+
   };
 
 
