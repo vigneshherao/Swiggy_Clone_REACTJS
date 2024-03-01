@@ -3,6 +3,7 @@ import { cardUrl } from "../utils/link";
 const RestaurentCard = ({ resData }) => {
   let { name, avgRating, sla, locality, cuisines, cloudinaryImageId } =
     resData.info;
+
   return (
     <div className="transition-transform duration-200 ease-in-out transform hover:scale-95 card h-[10.8rem] w-[15.5rem] mr-[2.4rem] border-0 mb-9">
       <div className="hover:scale-98">

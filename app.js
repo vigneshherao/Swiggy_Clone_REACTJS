@@ -12,6 +12,7 @@ import appStore from "./src/utils/appStore";
 import Cart from "./src/components/Cart";
 import MobileHeader from "./src/components/MobileHeader";
 import Help from "./src/components/Help";
+import Footer from "./src/components/Footer";
 
 // Header
 // Body
@@ -37,6 +38,7 @@ const AppLayout = () => {
         <MobileHeader/>
       </UserContext.Provider>
       <Outlet />
+      <Footer/>
     </div>
     </Provider>
   );
@@ -55,7 +57,7 @@ const appRouter = createBrowserRouter([
         errorElement: <Error />,
       },
       {
-        path: "/offers",
+        path: "/cart",
         element: <Cart/>,
       },
       {

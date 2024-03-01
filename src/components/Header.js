@@ -70,10 +70,9 @@ const Header = () => {
           <li className="mr-12">
             <Link
               className="hover:text-orange-500 no-underline text-gray-700 font-bold"
-              to={"/offers"}
+              to={"/cart"}
             >
-              <i className="fa-solid fa-cart-shopping mr-2"></i>
-              {cartItems.length} Items
+                        {cartItems.length == 0?  <span className="ml-3 font-bold no-underline text-black-400 font-sans"> <i className="fa-solid fa-cart-shopping mr-1"></i>{cartItems.length + " Items"}</span>:  <span className="ml-3 font-bold no-underline text-orange-600 font-sans"> <i className="fa-solid fa-cart-shopping mr-1"></i>{cartItems.length + " Items"}</span>}
             </Link>
           </li>
         </ul>

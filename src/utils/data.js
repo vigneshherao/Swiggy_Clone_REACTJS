@@ -187,130 +187,25 @@ export const restaurantsData = [
 ;
   
 
-export const itemList =
-  [
-    {
-      "id": "750131",
-      "imageId": "v1674029850/PC_Creative%20refresh/3D_bau/banners_new/Dosa.png",
-      "action": {
-        "link": "https://www.swiggy.com/collections/80424?collection_id=80424&tags=layout_CCS_Dosa&type=rcv2",
-        "text": "Dosa",
-        "type": "WEBLINK"
-      },
-      "entityType": "BANNER",
-      "accessibility": {
-        "altText": "restaurants curated for dosa",
-        "altTextCta": "open"
-      },
-      "entityId": "swiggy://collectionV2?collection_id=80424&tags=layout_CCS_Dosa",
-      "frequencyCapping": {
-        
-      }
-    },
-    {
-      "id": "750234",
-      "imageId": "v1674029855/PC_Creative%20refresh/3D_bau/banners_new/Poori.png",
-      "action": {
-        "link": "https://www.swiggy.com/collections/80377?collection_id=80377&tags=layout_BAU_Contextual%2Cpoori&type=rcv2",
-        "text": "Poori",
-        "type": "WEBLINK"
-      },
-      "entityType": "BANNER",
-      "accessibility": {
-        "altText": "restaurant curated for poori",
-        "altTextCta": "open"
-      },
-      "entityId": "80377",
-      "frequencyCapping": {
-        
-      }
-    },
-    {
-      "id": "750554",
-      "imageId": "v1674029842/PC_Creative%20refresh/3D_bau/banners_new/Uttapam.png",
-      "action": {
-        "link": "https://www.swiggy.com/collections/80415?collection_id=80415&tags=layout_CCS_Uthappam&type=rcv2",
-        "text": "Uthappam",
-        "type": "WEBLINK"
-      },
-      "entityType": "BANNER",
-      "accessibility": {
-        "altText": "restaurant curated for uttappam",
-        "altTextCta": "open"
-      },
-      "entityId": "swiggy://collectionV2?collection_id=80415&tags=layout_CCS_Uthappam",
-      "frequencyCapping": {
-        
-      }
-    },
-    {
-      "id": "750643",
-      "imageId": "v1674029846/PC_Creative%20refresh/3D_bau/banners_new/Idli.png",
-      "action": {
-        "link": "https://www.swiggy.com/collections/80440?collection_id=80440&tags=layout_CCS_Idli&type=rcv2",
-        "text": "Idli",
-        "type": "WEBLINK"
-      },
-      "entityType": "BANNER",
-      "accessibility": {
-        "altText": "restaurants curated for idly",
-        "altTextCta": "open"
-      },
-      "entityId": "swiggy://collectionV2?collection_id=80440&tags=layout_CCS_Idli",
-      "frequencyCapping": {
-        
-      }
-    },
-    {
-      "id": "750204",
-      "imageId": "v1674029853/PC_Creative%20refresh/3D_bau/banners_new/Parotta.png",
-      "action": {
-        "link": "https://www.swiggy.com/collections/80477?collection_id=80477&tags=layout_BAU_Contextual%2Cparotta&type=rcv2",
-        "text": "Parotta",
-        "type": "WEBLINK"
-      },
-      "entityType": "BANNER",
-      "accessibility": {
-        "altText": "restaurant curated for parotta",
-        "altTextCta": "open"
-      },
-      "entityId": "80477",
-      "frequencyCapping": {
-        
-      }
-    },
-    {
-      "id": "750561",
-      "imageId": "v1674029842/PC_Creative%20refresh/3D_bau/banners_new/Vada.png",
-      "action": {
-        "link": "https://www.swiggy.com/collections/80425?collection_id=80425&tags=layout_BAU_Contextual%2Cvada&type=rcv2",
-        "text": "Vada",
-        "type": "WEBLINK"
-      },
-      "entityType": "BANNER",
-      "accessibility": {
-        "altText": "restaurants curated for vada",
-        "altTextCta": "open"
-      },
-      "entityId": "80425",
-      "frequencyCapping": {
-        
-      }
-    }
-];
+
 
 export const helpData = [
   {
-    list:"What is Swiggy Customer Care Number?"
+    list:"What is Swiggy Customer Care Number?",
+    des:"We value our customer’s time and hence moved away from a single customer care number to a comprehensive chat-based support system for quick and easy resolution. You no longer have to go through the maze of an IVRS call support. Just search for your issue in the help section on this page and initiate a chat with us. A customer care executive will be assigned to you shortly."
   },
   {
-    list:"I am unable to find the restaurant I'm looking for?"
+    list:"I am unable to find the restaurant I'm looking for?",
+    des:"The restaurant might either be closed at the moment or temporarily not serviceable due to the low rider availability near the restaurant. Please try again after some time or consider ordering from a different restauraunt."
   },
   {
-    list:"I am unable to place a cash on delivery order?"
+    list:"I am unable to place a cash on delivery order?",
+    des:"COD option may not be available due to below reasons:  - High value order"
+
   },
   {
-    list:"I did not receive my OTP on SMS?"
+    list:"I did not receive my OTP on SMS?",
+    des:"If you're not receiving the OTP, it's usually due to a network issue. Please check your mobile network settings and try generating a new OTP."
   }
 ] 
 

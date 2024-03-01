@@ -5,7 +5,7 @@ const Error = () => {
     const errStyle = { textAlign: 'center' };
     return (
         <div className="error" style={errStyle}>
-            <h1>Oops !</h1>
+            <h1>Oops!</h1>
             <h2>{err.data}</h2>
             <p>{err.status} Found!</p>
         </div>

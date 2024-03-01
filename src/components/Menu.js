@@ -5,29 +5,25 @@ import RestaurentAccordian from "./RestaurentAccordian";
 import { useState } from "react";
 
 export const Menu = () => {
-
-  let [showIndex ,setShowIndex ] = useState(0);
+  let [showIndex, setShowIndex] = useState(0);
 
   let { resId } = useParams();
 
   const restaurantItems = useMenu(resId);
 
-
   if (restaurantItems.length === 0) {
     return <MenuShimmer />;
   }
 
-
   const { name, cuisines, city, totalRatingsString, locality, avgRating } =
     restaurantItems.data?.cards[2]?.card?.card?.info;
-
 
   const itemCard =
     restaurantItems.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]
       ?.card?.card?.itemCards;
 
-  const choices =
-  restaurantItems.data?.cards[4]?.groupedCard?.cardGroupMap.REGULAR.cards.filter(
+  const choices1 =
+    restaurantItems.data?.cards[4]?.groupedCard?.cardGroupMap.REGULAR.cards.filter(
       (res) => {
         return (
           res.card?.card?.["@type"] ==
@@ -36,6 +32,15 @@ export const Menu = () => {
       }
     );
 
+  const choices2 =
+    restaurantItems.data?.cards[5]?.groupedCard?.cardGroupMap.REGULAR.cards.filter(
+      (res) => {
+        return (
+          res.card?.card?.["@type"] ==
+          "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
+        );
+      }
+    );
 
   return (
     <div className=" w-[100%] px-[8%] sm:px-[10%] md:px-[20%]">
@@ -77,11 +82,14 @@ export const Menu = () => {
         </div>
       </div>
       <div>
-        {choices.map((res,index) => {
-          return (
-            <RestaurentAccordian key={res.id} data={res} showItem={index === showIndex ? true:false } setShowIndex = {()=> setShowIndex(index)} />
-          );
-        })}
+        {(choices1 ?? choices2).map((res, index) => (
+          <RestaurentAccordian
+            key={index}
+            data={res}
+            showItem={index === showIndex}
+            setShowIndex={() => setShowIndex(index)}
+          />
+        ))}
       </div>
     </div>
   );

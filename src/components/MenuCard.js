@@ -1,32 +1,32 @@
 import { useDispatch } from "react-redux";
 import { addItem } from "../utils/cartSlice";
-import { menuImage } from "../utils/link";
+import { menuImage,nonVeg,veg } from "../utils/link";
 
 export const MenuCard = ({ itemData }) => {
   if (!itemData) {
     return null;
   }
 
-  const { name, imageId, description, isVeg, price } = itemData;
-
+  const { name, imageId, description, isVeg, price,defaultPrice } = itemData;
+  
   const dispatch = useDispatch();
+
   const handleAddItem = (itemData)=>{
     dispatch(addItem(itemData));
   }
+
+
 
   return (
     <div className="menu-card flex mt-[20px] justify-between pb-[1.5rem] items-center border-b border-gray-300 leading-none px-2">
       <div className="item-description justify-center items-center leading-1">
         {isVeg == 1 ? (
-          <i className="fa-solid fa-leaf" style={{ color: "#5ac24c" }} />
+          <img className="w-3 h-3" src={veg}></img>
         ) : (
-          <i
-            className="fa-solid fa-drumstick-bite"
-            style={{ color: "#c11a1a" }}
-          />
+          <img className="w-3 h-3" src={nonVeg}></img>
         )}
         <h6>{name}</h6>
-        <p className="mb-3"> &#8377; {price / 100}</p>
+        <p className="mb-3"> &#8377; {price / 100 | defaultPrice/100}</p>
         <p className=" text-[rgba(40,44,63,.45)] text-xs w-[80%]">{description? description.slice(0, 80) + ".." : ""}</p>
       </div>
       <div className="">

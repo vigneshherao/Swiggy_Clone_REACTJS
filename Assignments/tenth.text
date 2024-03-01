@@ -1,0 +1,42 @@
+1.What is the  differnce btw sass and scss?
+->Sass is the syntacally awesome style sheet used for the well organised css! Sass actually makes CSS more powerful with math and variable support. 
+->SASS follows strict indentation
+->SASS has a loose syntax with white space and no semicolons
+->SASS file extension is .sass
+
+->Scss code syntax is not required for SCSS.
+->SCSS has no strict indentation.
+-> the SCSS resembles more to CSS style and use of semicolons and braces are mandatory.
+-> SCSS file extension is .scss.
+
+
+2.Explore all the ways of writing css
+
+Sass and scss, Chakra ui, materalui,taiwind
+
+
+3.How do we configure tailwind?
+
+Install Tailwind CSS with Parcel
+
+->Install Tailwind CSS
+->Configure PostCSS
+->Configure your template paths
+->Add the Tailwind directives to your CSS
+-.Start your build process
+->Start using Tailwind in your project
+
+
+4. In tailwind.config.js, what does all the keys mean (content, theme, extend,
+plugins?
+
+
+->content section is where you configure the paths to all of your HTML templates, JS components, and any other files that contain Tailwind class names.
+->theme section is where you define your color palette, fonts, type scale, border sizes, breakpoints — anything related to the visual design of your site.
+->plugins section allows you to register plugins with Tailwind that can be used to generate extra utilities, components, base styles, or custom variants.
+
+
+->Why do we have .postcssrc file?
+
+THis is the configuartion for js postcssrc
+
