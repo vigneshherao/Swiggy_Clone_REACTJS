@@ -8,6 +8,7 @@ import DishFilter from "./DishFilter";
 const Dishes = () => {
   const [dishes, setDishes] = useState([]);
   const [info, setInfo] = useState("");
+  console.log(dishes);
 
   useEffect(() => {
     fetchData();
@@ -15,7 +16,7 @@ const Dishes = () => {
 
    const fetchData = async () => {
     const data = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.887952142405728&lng=74.88308038562536&collection=83650&tags=layout_CCS_IceCreams&sortBy=&filters=&type=rcv2&offset=0&page_type=null%22"
+      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.91870&lng=74.85980&collection=83644&tags=layout_CCS_Pizza&sortBy=&filters=&type=rcv2&offset=0&page_type=null"
     );
     const dishData = await data.json();
     const card = dishData.data?.cards?.filter((res) => {
@@ -29,9 +30,7 @@ const Dishes = () => {
   };
 
 
-  return dishes.length == 0 ? (
-    <MenuShimmer />
-  ) : (
+  return  (
     <div className="body w-12/12">
       <div className="border-b">
         <span className="text-[28px] font-bold  flex justify-start my-2.5 ml-[12.5%] md:ml-[12rem] pt-4">
