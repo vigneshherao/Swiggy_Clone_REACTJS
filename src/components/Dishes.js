@@ -8,7 +8,7 @@ import DishFilter from "./DishFilter";
 const Dishes = () => {
   const [dishes, setDishes] = useState([]);
   const [info, setInfo] = useState("");
-  console.log(dishes);
+
 
   useEffect(() => {
     fetchData();
@@ -29,8 +29,7 @@ const Dishes = () => {
     setDishes(card);
   };
 
-
-  return  (
+  return !info? <MenuShimmer/>:  (
     <div className="body w-12/12">
       <div className="border-b">
         <span className="text-[28px] font-bold  flex justify-start my-2.5 ml-[12.5%] md:ml-[12rem] pt-4">

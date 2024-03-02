@@ -90,9 +90,9 @@ const Body = () => {
       <div className="item-container flex flex-wrap justify-center border-b">
         {ItemData && ItemData.length > 0 ? (
           ItemData.map((item) => (
-            <Link key={item.id} to={"/item/" + item.id}>
+            // <Link key={item.id} to={"/item/" + item.id}>
               <ItemCard key={item.id} cardData={item} />
-            </Link>
+            // </Link>
           ))
         ) : (
           <Link className="w-[75%] sm:h-[400px]" to={"/item/" + 750592}>

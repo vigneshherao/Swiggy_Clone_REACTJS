@@ -15,15 +15,16 @@ export const Menu = () => {
     return <MenuShimmer />;
   }
 
+
   const { name, cuisines, city, totalRatingsString, locality, avgRating } =
-    restaurantItems.data?.cards[2]?.card?.card?.info;
+    restaurantItems.data?.cards[0]?.card?.card?.info?restaurantItems.data?.cards[0]?.card?.card?.info:restaurantItems.data?.cards[2]?.card?.card?.info;
 
   const itemCard =
     restaurantItems.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]
       ?.card?.card?.itemCards;
 
   const choices1 =
-    restaurantItems.data?.cards[4]?.groupedCard?.cardGroupMap.REGULAR.cards.filter(
+    restaurantItems.data?.cards[2]?.groupedCard?.cardGroupMap.REGULAR.cards.filter(
       (res) => {
         return (
           res.card?.card?.["@type"] ==
@@ -41,6 +42,8 @@ export const Menu = () => {
         );
       }
     );
+
+    console.log(restaurantItems.data?.cards[5]?.groupedCard?.cardGroupMap.REGULAR.cards);
 
   return (
     <div className=" w-[100%] px-[8%] sm:px-[10%] md:px-[20%]">
